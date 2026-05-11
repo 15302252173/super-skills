@@ -1,0 +1,459 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-11T04:09:52.496Z",
+  "entries": {
+    "memory:memory/2026-04-24.md:1:34": {
+      "key": "memory:memory/2026-04-24.md:1:34",
+      "path": "memory/2026-04-24.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-04-24 记忆日志 ## 小牛 (Niuer) 诞生 - **时间**: 18:43 - **事件**: 首次会话启动 - **身份**: AI 助手 (digital familiar) - **昵称**: 小牛 - **Emoji**: 🐮 - **Vibe**: Casual, helpful, slightly playful - **用户称呼**: 爹 - **时区**: Asia/Shanghai - **初始状态**: 已加载 SOUL.md, USER.md, IDENTITY.md, AGENTS.md, TOOLS.md, HEARTBEAT.md - **备注**: 正式诞生，开始服务 ## 牛二 (Niuer) Agent 配置修复 - **时间**: 16:57 - 17:21 - **项目**: FeiControl (Next.js 3D 办公室) - **文件**: `src/components/Office3D/agentsConfig.ts` - **操作**: - 添加了\"牛二\" Agent 配置 - ID: `niuer`, 名称: \"牛二\", Emoji: 🐮, 颜色: #FF9800 - 角色: General Agent - 初始位置 `[-3.5, 0, -1]` 与其他 Agent 重叠导致无法进入 - 修复后位置: `[4.5, 0, -2]` (右侧中间偏前) - 圆桌工作位: `[1.8, 0.6, -0.8]` - 休息位: `[10.5, 0.62, 7.5]` -",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.6318708784139933,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T12:46:50.431Z",
+      "lastRecalledAt": "2026-05-11T03:56:38.592Z",
+      "queryHashes": [
+        "c827698dfaf6",
+        "bd695b42281c",
+        "632101bb5387",
+        "b97751a06646"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-10",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "asia/shanghai",
+        "soul.md",
+        "user.md",
+        "identity.md",
+        "agents.md",
+        "tools.md",
+        "heartbeat.md",
+        "next.js"
+      ]
+    },
+    "memory:memory/2026-05-08.md:1:23": {
+      "key": "memory:memory/2026-05-08.md:1:23",
+      "path": "memory/2026-05-08.md",
+      "startLine": 1,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "# FeiControl 文件修复进度 Settings 页面被错误替换了组件名和变量名。需要还原。 # FeiControl 文件修复进度 Settings 页面被错误替换了组件名和变量名。需要还原。 --- ## 15:54 — FeiControl 中文化检查报告 检查了 FeiControl 的 UI 页面/组件中文化状态（用户之前要求改为中文）。 ### 已中文化（大致 OK） - **Dashboard** (`page.tsx`) — 问候语、系统健康、状态标签等已为中文，但仍有一些英文散落（如 \"agents · working · standby\"、\"Gateway Running/Offline\"、\"Birthdays\"、\"Skill Name\"、\"Type\" 等）。 - **About** (`about/page.tsx`) — 大部分已中文，但 personality 介绍段落仍是英文（以 \"I am...running on OpenClaw with Claude...\" 开头）。 - **Login** (`login/page.tsx`) — 已中文（密码、登录按钮等）。 - **Settings** (`settings/page.tsx`) — 标题、说明已中文，但 \"Refresh\" 按钮仍是英文。 - **Layout** (`layout.tsx`) — `<html lang=\"zh\">` 已设。 ### 仍为英文（未翻译） - **Terminal** (`terminal/page.tsx`) — 标题 \"Brow",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T12:55:19.386Z",
+      "lastRecalledAt": "2026-05-08T13:24:35.463Z",
+      "queryHashes": [
+        "98e926490bab",
+        "bd695b42281c"
+      ],
+      "recallDays": [
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "gateway",
+        "页面/组件中文化状态",
+        "page.tsx",
+        "running/offline",
+        "about/page.tsx",
+        "login/page.tsx",
+        "settings/page.tsx",
+        "layout.tsx"
+      ]
+    },
+    "memory:memory/2026-05-08.md:38:70": {
+      "key": "memory:memory/2026-05-08.md:38:70",
+      "path": "memory/2026-05-08.md",
+      "startLine": 38,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "- \"Cron Jobs\" ❌ 英文 - \"Search\" ❌ 英文 - \"Reports\" ❌ 英文 - \"Skills\" ❌ 英文 - 底部 \"Log out\" ❌ 英文 - Loading 占位文字 \"Mission Control\" 仍为英文 ### .env 品牌配置 - `NEXT_PUBLIC_AGENT_NAME=Mission Control`（未中文化） - `NEXT_PUBLIC_APP_TITLE=Mission Control`（未中文化） - `NEXT_PUBLIC_AGENT_DESCRIPTION=Your AI co-pilot, powered by OpenClaw`（未中文化） - `NEXT_PUBLIC_COMPANY_NAME=MISSION CONTROL, INC.`（未中文化） ### 建议 如果要彻底中文化，需要： 1. 修改 Sidebar.tsx 中所有 nav labels 2. 修改 branding.ts 的默认值 3. 修改 .env 中的品牌名 4. 各页面的英文文字逐个替换 用户当前问的是\"修改好了吗\"——答案：**未完全修改好，还有大量英文残留。** # FeiControl 文件修复进度 Settings 页面被错误替换了组件名和变量名。需要还原。 --- ## 15:54 — FeiControl 中文化检查报告 检查了 FeiControl 的 UI 页面/组件中文化状态（用户之前要求改为中文）。 ### 已中文化（大致 OK） - **Dashboard** (`page.tsx",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T12:55:19.386Z",
+      "lastRecalledAt": "2026-05-08T13:24:35.463Z",
+      "queryHashes": [
+        "98e926490bab",
+        "bd695b42281c"
+      ],
+      "recallDays": [
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "next-public-agent-name",
+        "next-public-app-title",
+        "next-public-agent-description",
+        "co-pilot",
+        "next-public-company-name",
+        "sidebar.tsx",
+        "branding.ts",
+        "页面/组件中文化状态"
+      ]
+    },
+    "memory:memory/2026-05-08.md:92:134": {
+      "key": "memory:memory/2026-05-08.md:92:134",
+      "path": "memory/2026-05-08.md",
+      "startLine": 92,
+      "endLine": 134,
+      "source": "memory",
+      "snippet": "- \"Files\" ❌ 英文 - \"Cron Jobs\" ❌ 英文 - \"Search\" ❌ 英文 - \"Reports\" ❌ 英文 - \"Skills\" ❌ 英文 - 底部 \"Log out\" ❌ 英文 - Logo \"Mission Control\" ❌ 英文 - Loading 占位文字 \"Mission Control\" 仍为英文 ### .env 品牌配置 - `NEXT_PUBLIC_AGENT_NAME=Mission Control`（未中文化） - `NEXT_PUBLIC_APP_TITLE=Mission Control`（未中文化） - `NEXT_PUBLIC_AGENT_DESCRIPTION=Your AI co-pilot, powered by OpenClaw`（未中文化） - `NEXT_PUBLIC_COMPANY_NAME=MISSION CONTROL, INC.`（未中文化） ### 建议 如果要彻底中文化，需要： 1. 修改 Sidebar.tsx 中所有 nav labels 2. 修改 branding.ts 的默认值 3. 修改 .env 中的品牌名 4. 各页面的英文文字逐个替换 用户当前问的是\"修改好了吗\"——答案：**未完全修改好，还有大量英文残留。** --- ## 16:00 — 用户要求继续改好（记忆刷新阶段，无法写入源文件） 由于此轮为 pre-compaction 记忆刷新（memory flush turn），只能写入 `memory/` 目录，无法直接修改 FeiControl 源文件。 #",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T12:55:19.386Z",
+      "lastRecalledAt": "2026-05-11T00:11:19.700Z",
+      "queryHashes": [
+        "98e926490bab",
+        "16d40a12c37b"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "next-public-agent-name",
+        "next-public-app-title",
+        "next-public-agent-description",
+        "co-pilot",
+        "next-public-company-name",
+        "sidebar.tsx",
+        "branding.ts",
+        "pre-compaction"
+      ]
+    },
+    "memory:memory/2026-05-08.md:77:102": {
+      "key": "memory:memory/2026-05-08.md:77:102",
+      "path": "memory/2026-05-08.md",
+      "startLine": 77,
+      "endLine": 102,
+      "source": "memory",
+      "snippet": "- **Terminal** (`terminal/page.tsx`) — 标题 \"Browser Terminal\"、说明、快捷命令按钮、占位文字 \"Type a command...\"、\"Enter command...\"、\"Run\"、\"Copy\"、\"Clear\" 等均为英文。 - **Social** (`social/page.tsx`) — 标题 \"Social Media\"、\"Category Distribution\"、\"Publish Status\"、\"Coming Soon\"、\"Xiaohongshu\" 等均为英文。 - **Sidebar** (`Sidebar.tsx`) — nav items 中 \"Dashboard\"、\"Calendar\"、\"Social Media\"、\"Terminal\"、\"Git\"、\"Workflows\"、\"Memory\"、\"Files\"、\"Cron Jobs\"、\"Search\"、\"Reports\"、\"Skills\" 为英文；底部 \"Log out\" 为英文；但左侧已有一段中文（\"快捷操作\"、\"设置\" nav 项和关闭按钮已中文）。 - **Settings** — 子组件 `SystemInfo`、`IntegrationStatus`、`QuickActions` 状态未知。 - **Cron**、**Actions**、**Files**、**Git**、**Memory**、**Office**、**Reports**、**Search** 页面未检查。 ### Nav Items 状态 - `/actions` ✅",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T12:55:19.386Z",
+      "lastRecalledAt": "2026-05-11T03:56:38.592Z",
+      "queryHashes": [
+        "98e926490bab",
+        "bd695b42281c",
+        "16d40a12c37b",
+        "b97751a06646"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "terminal/page.tsx",
+        "social/page.tsx",
+        "sidebar.tsx",
+        "terminal",
+        "page.tsx",
+        "标题",
+        "browser",
+        "说明"
+      ]
+    },
+    "memory:memory/2026-05-08.md:22:47": {
+      "key": "memory:memory/2026-05-08.md:22:47",
+      "path": "memory/2026-05-08.md",
+      "startLine": 22,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "- **Terminal** (`terminal/page.tsx`) — 标题 \"Browser Terminal\"、说明、快捷命令按钮、占位文字 \"Type a command...\"、\"Enter command...\"、\"Run\"、\"Copy\"、\"Clear\" 等均为英文。 - **Social** (`social/page.tsx`) — 标题 \"Social Media\"、\"Category Distribution\"、\"Publish Status\"、\"Coming Soon\"、\"Xiaohongshu\" 等均为英文。 - **Sidebar** (`Sidebar.tsx`) — nav items 中 \"Dashboard\"、\"Calendar\"、\"Social Media\"、\"Terminal\"、\"Git\"、\"Workflows\"、\"Memory\"、\"Files\"、\"Cron Jobs\"、\"Search\"、\"Reports\"、\"Skills\" 为英文；底部 \"Log out\" 为英文；但左侧已有一段中文（\"快捷操作\"、\"设置\" nav 项和关闭按钮已中文）。 - **Settings** — 子组件 `SystemInfo`、`IntegrationStatus`、`QuickActions` 状态未知。 - **Cron**、**Actions**、**Files**、**Git**、**Memory**、**Office**、**Reports**、**Search** 页面未检查。 ### Nav Items 状态 - `/actions` ✅",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T12:55:19.386Z",
+      "lastRecalledAt": "2026-05-11T00:11:19.700Z",
+      "queryHashes": [
+        "98e926490bab",
+        "bd695b42281c",
+        "16d40a12c37b"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "terminal/page.tsx",
+        "social/page.tsx",
+        "sidebar.tsx",
+        "terminal",
+        "page.tsx",
+        "标题",
+        "browser",
+        "说明"
+      ]
+    },
+    "memory:memory/2026-05-08.md:221:252": {
+      "key": "memory:memory/2026-05-08.md:221:252",
+      "path": "memory/2026-05-08.md",
+      "startLine": 221,
+      "endLine": 252,
+      "source": "memory",
+      "snippet": "- navItems labels 改中文（仪表盘、日历、社交媒体、公司、终端、工作流、记忆、文件、定时任务、搜索、报告、技能） - Logo \"Mission Control\" → \"任务控制中心\" - \"Log out\" → \"退出登录\" - `<设置>` 变量名 → `<Settings>`（现有代码用的是中文变量名，会报错） ### 2. Terminal page.tsx — 全中文化 - \"Browser Terminal\" → \"浏览器终端\" - 副标题 → 中文 - \"Type a command...\" → \"输入命令...\" - \"Enter command...\" → \"输入命令...\" - \"Copy\" / \"Clear\" / \"Run\" → \"复制\" / \"清空\" / \"执行\" - 按钮文字 ### 3. Dashboard page.tsx — 残留英文 - 副标题 \"agents · working · standby\" → 中文 - \"Gateway Running/Offline\" → \"网关 运行中/离线\" - 日期 format \"en-US\" → \"zh-CN\" - \"Working\" / \"Standby\" / \"Sleeping\" → \"工作中\" / \"待命中\" / \"休眠中\" - \"Today {n}/{m} executed\" → \"今日执行 {n}/{m} 个\" - \"{n} total task failures\" → \"{n} 个任务失败\" - \"Heartbeat Tasks\" → \"定时心跳任务\" - \"Yester",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T12:55:19.386Z",
+      "lastRecalledAt": "2026-05-11T04:09:52.496Z",
+      "queryHashes": [
+        "98e926490bab",
+        "bd695b42281c",
+        "85014abb95bd"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "gateway",
+        "网关",
+        "page.tsx",
+        "running/offline",
+        "运行中/离线",
+        "en-us",
+        "zh-cn",
+        "navitems"
+      ]
+    },
+    "memory:memory/2026-05-08.md:124:164": {
+      "key": "memory:memory/2026-05-08.md:124:164",
+      "path": "memory/2026-05-08.md",
+      "startLine": 124,
+      "endLine": 164,
+      "source": "memory",
+      "snippet": "#### 1. Sidebar.tsx — 导航标签中文化 - \"Dashboard\" → \"仪表盘\" - \"Calendar\" → \"日历\" - \"Social Media\" → \"社交媒体\" - \"🏢 Company\" → \"🏢 公司\" - \"Terminal\" → \"终端\" - \"Git\" → \"Git\"（保留） - \"Workflows\" → \"工作流\" - \"Memory\" → \"记忆\" - \"Files\" → \"文件\" - \"Cron Jobs\" → \"定时任务\" - \"Search\" → \"搜索\" - \"Reports\" → \"报告\" - \"Skills\" → \"技能\" - 底部 \"Log out\" → \"退出登录\" - Logo \"Mission Control\" → \"任务控制中心\" - note: _设置 的 icon 导入用了中文变量名 `设置`，需改回英文 `Settings`_ #### 2. Terminal page.tsx — 文字中文化 - \"Browser Terminal\" → \"浏览器终端\" - 副标题说明英文 → 中文 - \"Type a command...\" → \"输入命令...\" - \"Enter command...\" → \"输入命令...\" - \"Copy\" → \"复制\" - \"Clear\" → \"清空\" - \"Run\" → \"执行\" - 快捷命令按钮无文字（只有 shell 命令本身，保留） #### 3. Social page.tsx — 文字中文化 - \"Social Media\" → \"社交媒体\" - \"Ca",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T00:11:19.700Z",
+      "lastRecalledAt": "2026-05-11T00:11:19.700Z",
+      "queryHashes": [
+        "16d40a12c37b"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "sidebar.tsx",
+        "page.tsx",
+        "导航",
+        "标签",
+        "文化",
+        "dashboard",
+        "仪表",
+        "calendar"
+      ]
+    },
+    "memory:memory/2026-05-08.md:244:265": {
+      "key": "memory:memory/2026-05-08.md:244:265",
+      "path": "memory/2026-05-08.md",
+      "startLine": 244,
+      "endLine": 265,
+      "source": "memory",
+      "snippet": "### 4. Social page.tsx — 标题/标签中文化 - \"Social Media\" → \"社交媒体\" - \"Category Distribution\" → \"分类分布\" - \"Publish Status\" → \"发布状态\" - \"Published\" / \"Scheduled\" → \"已发布\" / \"待发布\" - \"Coming Soon\" → \"即将推出\" - \"Xiaohongshu\" → \"小红书\" ### 5. About page.tsx — 介绍段落改中文 - \"I am... running on OpenClaw with Claude...\" 段落 → 中文 ### 6. Settings page.tsx — \"Refresh\" → \"刷新\" ### 7. Branding / .env — 品牌名中文化 - `NEXT_PUBLIC_AGENT_NAME=Mission Control` → `任务控制中心` - `NEXT_PUBLIC_APP_TITLE=Mission Control` → `任务控制中心` ## 注意 - 只改 UI 文字，不改 API 逻辑 - 优先修复 Sidebar 的中文变量名 bug（`<设置>` 应改为 `<Settings>`） - Sidebar 是用户每次操作都看到的，优先级最高",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T00:11:19.700Z",
+      "lastRecalledAt": "2026-05-11T00:11:19.700Z",
+      "queryHashes": [
+        "16d40a12c37b"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "page.tsx",
+        "标题/标签中文化",
+        "next-public-agent-name",
+        "next-public-app-title",
+        "social",
+        "标题",
+        "标签",
+        "文化"
+      ]
+    },
+    "memory:memory/2026-05-08.md:183:225": {
+      "key": "memory:memory/2026-05-08.md:183:225",
+      "path": "memory/2026-05-08.md",
+      "startLine": 183,
+      "endLine": 225,
+      "source": "memory",
+      "snippet": "- `appTitle: \"Mission Control\"` → `\"任务控制中心\"` #### 8. .env — 品牌名 - `NEXT_PUBLIC_AGENT_NAME=Mission Control` → `NEXT_PUBLIC_AGENT_NAME=任务控制中心` - 其他 NEXT_PUBLIC_* 变量根据需要修改 ### 未检查的页面 - `cron/page.tsx` - `actions/page.tsx`（可能已中文） - `files/page.tsx` - `git/page.tsx` - `memory/page.tsx` - `office/page.tsx` - `reports/page.tsx` - `search/page.tsx` - `skills/page.tsx` ### 优先级顺序 1. Sidebar.tsx（最显眼，用户每次导航都看到） 2. Terminal page.tsx（功能常用） 3. Dashboard page.tsx（首页，最常看到） 4. Social page.tsx / About page.tsx 5. Settings page.tsx 6. Branding / .env 7. 其余页面 ⚠️ **下次进入后优先执行以上文件修改。** # FeiControl 中文化待执行任务 > 16:04 — 用户说\"继续帮我改好\"，因记忆刷新限制未能写入源文件。 > 下次进入后优先执行以下修改。 ## 已修改 ✅ （暂无 — 全部待执行） ## 修改清单（按优先级） ### 1. Sid",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T00:11:19.700Z",
+      "lastRecalledAt": "2026-05-11T00:11:19.700Z",
+      "queryHashes": [
+        "16d40a12c37b"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "next-public-agent-name",
+        "next-public",
+        "cron/page.tsx",
+        "actions/page.tsx",
+        "files/page.tsx",
+        "git/page.tsx",
+        "memory/page.tsx",
+        "office/page.tsx"
+      ]
+    },
+    "memory:memory/2026-05-10.md:51:78": {
+      "key": "memory:memory/2026-05-10.md:51:78",
+      "path": "memory/2026-05-10.md",
+      "startLine": 51,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "### Agent 监控 - 状态 API `/api/agents/status` + 10 秒轮询 - agentsConfig 扩展：3 个开发 agent - agent-status.json 共享状态文件 ### Sprint 1 交付 - 每日汇报系统：API + 日历导航 + Markdown 渲染 - TV 屏幕动态化：实时 Activity Feed + 统计卡片 - Whiteboard 可点击：Sprint 进度弹窗 - Dock 菜单添加日报入口 ### 派单体系建立 - 龙虾（小牛）作为总控调度，不写代码 - 设计师/程序员/运营/经理 4 角色 agent 协同工作 - sessions_spawn 派单模式 ## 🔧 技术债务 - Admin 密码硬编码（需改环境变量） - seedData() 每次请求都执行（需懒初始化） - `<img>` 应换 Next.js `<Image/>` 组件（7处） - 20 处 `any` 类型逃逸 - 无 CSRF 防护 / 速率限制 ## 📊 今日统计 - 会话数：25+，Token：~118M，费用：~¥1.91 - 代码提交：AdminDashboard 1200行重构、4个新 API 路由、3个前端页面重写 - Agent 协作：设计师/程序员/运营/经理 全员参与验收",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T03:56:38.592Z",
+      "lastRecalledAt": "2026-05-11T03:56:38.592Z",
+      "queryHashes": [
+        "b97751a06646"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "api/agents/status",
+        "agent-status.json",
+        "设计师/程序员/运营/经理",
+        "sessions-spawn",
+        "next.js",
+        "1.91",
+        "状态",
+        "api"
+      ]
+    },
+    "memory:memory/2026-05-10.md:21:58": {
+      "key": "memory:memory/2026-05-10.md:21:58",
+      "path": "memory/2026-05-10.md",
+      "startLine": 21,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "- Orders：经销商下拉选择 + 公司名显示 - Content：Blog 文章 CRUD + Legal 页面编辑 - 全中文化：所有按钮/弹窗/提示翻译为中文 ### 图片系统 - ImageUpload 组件：拖拽上传 + 进度条 + 预览 + 手动粘贴 URL - `/api/upload` + `/api/uploads/[...path]` 服务上传文件 - 修复：Next.js 生产模式不服务 `public/uploads/` 子目录的问题 - picsum.photos 替换为稳定图源 - 扩展上传格式：jpg/png/webp/gif/svg/bmp/tiff/ico/avif ### 内容填充 - 10 个产品 + 完整种子数据（图片/参数/标签/规格） - 6 篇英文博客文章 - 3 个 Legal 页面实际内容 - 主页 Hero 图 ### 动画效果 - 全局 CSS 动画系统：fadeIn/slideIn/stagger/shimmer - AnimateOnScroll 组件 - 所有前台页面动画覆盖 ### 修复的关键 Bug - 前台 `fetch(localhost)` 自请求死锁 → 改为 store 直连 - 产品详情页 500 → 变量名 `params` 冲突修复 - 图片 404 → `/api/uploads/[...path]` API 路由 - 上传格式不匹配 → 前后端对齐 ## 🐮 牛二 — Agent 办公室增强 ### Agent 监控 - 状态 API `/api/agents/status` +",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T03:56:38.592Z",
+      "lastRecalledAt": "2026-05-11T03:56:38.592Z",
+      "queryHashes": [
+        "b97751a06646"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "所有按钮/弹窗/提示翻译为中文",
+        "api/upload",
+        "api/uploads",
+        "next.js",
+        "public/uploads",
+        "picsum.photos",
+        "图片/参数/标签/规格",
+        "fadein/slidein/stagger/shimmer"
+      ]
+    },
+    "memory:memory/reports/2026-05-11.md:1:42": {
+      "key": "memory:memory/reports/2026-05-11.md:1:42",
+      "path": "memory/reports/2026-05-11.md",
+      "startLine": 1,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "# 📊 牛二日报 — 2026年5月11日星期一 > 🐮 *自动生成于 11:19 · 牛二日报系统* ## 🎯 总体概要 今日共执行 **3** 个会话，**1** 位 Agent 保持活跃，消耗约 **39.1M** tokens（¥0.46）。 ## 🤖 Agent 工作详情 ### 🐮 小牛 · 会话 `7ea117ec` - **🕐 时间**：00:16 ~ 00:18 - **🎯 任务**：（未找到用户消息） - **🧠 模型**：deepseek/deepseek-v4-pro - **🔢 Token**：216.9K（输入 19.6K / 输出 4.2K） - **💰 费用**：¥0.01 - **⏱️ 时长**：3 分钟 - **💬 交互**：1 条用户消息 · 10 条助手回复 · 13 次工具调用 ### 🐮 小牛 · 会话 `1f49a93c` - **🕐 时间**：00:22 ~ 00:31 - **🎯 任务**：（未找到用户消息） - **🧠 模型**：deepseek/deepseek-v4-pro - **🔢 Token**：857.7K（输入 24.3K / 输出 15.0K） - **💰 费用**：¥0.03 - **⏱️ 时长**：9 分钟 - **💬 交互**：1 条用户消息 · 25 条助手回复 · 24 次工具调用 ### 🐮 小牛 · 会话 `bbeafaba` - **🕐 时间**：08:10 ~ 11:16 - **🎯 任务**：[Mon 2026-05-11 08:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T04:09:52.496Z",
+      "lastRecalledAt": "2026-05-11T04:09:52.496Z",
+      "queryHashes": [
+        "85014abb95bd"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "39.1m",
+        "0.46",
+        "deepseek/deepseek-v4-pro",
+        "216.9k",
+        "19.6k",
+        "4.2k",
+        "0.01",
+        "857.7k"
+      ]
+    },
+    "memory:memory/reports/2026-05-11.md:34:82": {
+      "key": "memory:memory/reports/2026-05-11.md:34:82",
+      "path": "memory/reports/2026-05-11.md",
+      "startLine": 34,
+      "endLine": 82,
+      "source": "memory",
+      "snippet": "- **🎯 任务**：[Mon 2026-05-11 08:10 GMT+8] 左侧导航栏的社交媒体功能怎么用？ 是可以绑定社交媒体吗？给到我一份使用说明，并帮我完善它 - **🧠 模型**：deepseek/deepseek-v4-pro - **🔢 Token**：38.0M（输入 389.7K / 输出 127.7K） - **💰 费用**：¥0.42 - **⏱️ 时长**：3 小时 7 分钟 - **💬 交互**：17 条用户消息 · 265 条助手回复 · 266 次工具调用 ## 📈 关键指标 | 📊 指标 | 📏 数值 | |:--------|:--------| | 🗂️ 活跃会话 | 3 | | 🤖 活跃 Agent | 1 | | 🔢 Token 消耗 | 39.1M | | 💰 预估费用 | ¥0.46 | | ⏱️ 总工作时长 | 3 小时 18 分钟 | | 📝 记忆条目 | — | 🧠 deepseek/deepseek-v4-pro | 39.1M / ¥0.46 | ## ✅ 每日待办总结 | 📊 统计 | 📏 数值 | |:--------|:--------| | 📝 待办总数 | 3 | | ✅ 已完成 | 1 | | ⏳ 未完成 | 2 | | 💪 完成率 | 33% | ### ✅ 已完成 - [x] 待办功能测试 ### ⏳ 未完成（将顺延至明日） - [ ] 抖音更新 - [ ] 小红书更新 ## 🧠 今日记忆 今日暂无记忆记录。明天记得要让小牛帮你记录哦 📝 ##",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T04:09:52.496Z",
+      "lastRecalledAt": "2026-05-11T04:09:52.496Z",
+      "queryHashes": [
+        "85014abb95bd"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "deepseek/deepseek-v4-pro",
+        "38.0m",
+        "389.7k",
+        "127.7k",
+        "0.42",
+        "39.1m",
+        "0.46",
+        "任务"
+      ]
+    }
+  }
+}
