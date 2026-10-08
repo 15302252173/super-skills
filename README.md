@@ -16,6 +16,7 @@ super-skills/
 │   └── HEARTBEAT.md  # 心跳检查任务
 ├── user-skills/      # 用户自定义 Skill
 ├── dbs-skills/       # dontbesilent 商业诊断工具箱 (17个)
+├── docs/             # 学习手册与实践模板
 ├── memory/           # 每日记忆示例
 └── README.md
 ```
@@ -56,6 +57,10 @@ super-skills/
 | **dbs-chatroom** | 定向聊天室（多角色对话） |
 | **dbs-save/restore/report** | 状态管理三件套 |
 | **dbs-agent-migration** | Agent 工作台迁移 |
+
+## 学习手册
+
+- [抖音运营学习手册](docs/douyin-operations/README.md)：从选题、脚本、字幕和发布检查，到数据复盘与小步实验；区分官方公开依据、方法建议与待验证假设。
 
 ## 安装到新设备
 
